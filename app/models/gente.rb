@@ -1,0 +1,2 @@
+class Gente < ApplicationRecord
+end
