@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<div class="container px-5 px-sm-0">
+  <div class= "row">
+    <div class="col-md-2">
+      <center><p>About</p></center>
+    </div>
+    <div class="col-md-8">
+      <main>
+        <strong>ようこそ、ながのCAKEへ！<br />
+        このサイトは、ケーキ販売のECサイトになります。<br />
+        会員でない方も閲覧はできますが、<br />
+        購入には会員登録が必要になります。</strong>
+      </main>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-offset-4">
+        <table>
+          <h1>新着商品</h1>
+          <% @items.each do |item| %>
+          <tr>
+            <td><% attachment_image_tag item,  :profile_image, size:"70x70" format: 'jpeg' %></td>
+          </tr>
+          <tr>
+            <td><% item.name %></td>
+          </tr>
+          <tr>
+            <td><% ¥ + item.price %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-7">
+          <%= link_to "全ての商品を見る" item_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
