@@ -1,8 +1,9 @@
-class Public::HomeController < ApplicationController
+class Customer::HomeController < ApplicationController
   def top
-    @item = Items
+    @item = Items.all
   end
-
+  
   def about
   end
+  
 end

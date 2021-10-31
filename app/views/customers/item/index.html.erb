@@ -1,2 +1,25 @@
-<h1>Public::Item#index</h1>
-<p>Find me in app/views/public/item/index.html.erb</p>
+<div class="container px-5 px-sm-0" >
+    <div class="row">
+        <div class="col-md-3">
+            <%= render 'home/genre',home: @home %>
+        </div>
+        <div class="col-md-7">
+            <main>
+                <h1><p>商品一覧</p>（全x件）</h1>
+                <table>
+                    <%= @items.each do |item|%>
+                    <tr>
+                        <td><%= attachment_image_tag item, :profile_image, size:"70x70" format: 'jpeg' %></td>
+                    </tr>
+                    <tr>
+                        <td><%= item.name %></td>
+                    </tr>
+                    <tr>
+                        <td><%= ¥ + item.price %></td>
+                    </tr>
+                </table>
+                <%= paginate @items %>
+            </main>
+        </div>
+    </div>
+</div>

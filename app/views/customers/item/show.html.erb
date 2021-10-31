@@ -1,2 +1,26 @@
-<h1>Public::Item#show</h1>
-<p>Find me in app/views/public/item/show.html.erb</p>
+<div class="continer px-5 px-sm-0" >
+  <div class="row">
+    <div class="col-md-3">
+      <%= render 'home/genre',home: @home %>
+    </div>
+    <div class="table">
+      <div class="row">
+        <div class="col-md-7">
+          <tr>
+            <th><%= attachment_image_tag item, :profile_image, size:"70x70" format: 'jpeg' %></th>
+            <td><P><%= @item.name %></P></td>
+          </tr>
+          <tr>
+            <td><%= ¥ + @item.price （税込）%></td>
+          </tr>
+          <%= from_wtih model: @care_item do |f| %>
+          <tr>
+            <td><%= f.select :item [["1個","1個"], ["2個","2個"], ["3個","3個"], ["4個","4個"], ["5個","5個"], ["6個","6個"], ["7個","7個"], ["8個","8個"], ["9個","9個"], %></td>
+            <td><%= f.submit 'カートに入れる' %></td>
+          </tr>
+          <%= end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,0 @@
-class Gente < ApplicationRecord
-end

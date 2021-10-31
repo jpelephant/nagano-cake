@@ -1,2 +1,34 @@
-<h1>Public::CartItem#update</h1>
-<p>Find me in app/views/public/cart_item/update.html.erb</p>
+<div class="continer">
+  <div class="row">
+    <div class="col-md-3"><p>ショッピングカート</p></div>
+    <div class="col-md-6"></div>
+    <div class="col-md-3"><%= link to "カートを空にする" cart_item.destroy_all %></div>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+      <%= @items.each do |item| %>
+      <table>
+        <thead>
+          <tr>
+            <th>商品名</th>
+            <th>単価（税込）</th>
+            <th>数量</th>
+            <th>小計</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><%= item.name %></th>
+            <th><%= item.price %></th>
+            <th><%= item.amount %></th>
+            <th><%= item.%></th>
+            <th></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  
+

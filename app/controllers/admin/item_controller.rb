@@ -9,6 +9,9 @@ class Admin::ItemController < ApplicationController
   end
 
   def show
+    @home = Home.all
+    @itme = Item(paramas[:id])
+    @cart_item = Cart_item
   end
 
   def edit
