@@ -1,2 +1,35 @@
-<h1>Admin::Item#new</h1>
-<p>Find me in app/views/admin/item/new.html.erb</p>
+<div class="conteiner">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-4">
+      <h1><p>商品新規登録</p></h1>
+    </div>
+  </div>
+  <%= from_with model: @item, local: true do |from| %>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <tbody>
+        <tr>
+          <th><p>商品画像</p></th>
+          <th><%= f.attachment_field :image %></th>
+        </tr>
+        <tr>
+          <th><p>商品名</p></th>
+          <th><%=f.text_field :name %></th>
+        </tr>
+        <tr>
+          <th><p>商品紹介</p></th>
+          <th><%= f.text_area :description %></th>
+        </tr>
+        <tr>
+          <th>ジャンル</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th><p>税抜価格</p></th>
+          <th><%= f.text_field :price_without_tax %>円</th>
+        </tr>
+         <%= f.submit "新規登録" ,class: "btn btn-primary text-right" %>
+      </tbody>
+    </div>
+  </div>
+</conteiner>

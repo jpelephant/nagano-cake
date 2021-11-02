@@ -1,2 +1,16 @@
-<h1>Admin::Item#edit</h1>
-<p>Find me in app/views/admin/item/edit.html.erb</p>
+<div class="conteiner">
+  <div class="row">
+    <div class="col-md-2">
+      <h2><p>商品編集</p></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <%= form_with model:@item, local: true do |f| %>
+      <tr>
+        <td>商品画像</td>
+        <td></td>
+      </tr>
+    </div>
+  </div>
+</div>
