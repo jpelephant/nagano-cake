@@ -1,2 +1,47 @@
-<h1>Admin::Customer#show</h1>
-<p>Find me in app/views/admin/customer/show.html.erb</p>
+<div class="contnier">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-5">
+      <h2><p>山田花子さんの会員詳細</p></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="table">
+      <tr>
+        <th class="col-md-offset-2 col-md-3">会員ID</th>
+        <td class="col-md-1"><%= @customer.id %></td>
+      </tr>
+      <tr>
+        <th class="col-md-offset-2 col-md-3">氏名</th>
+        <td class="col-md-1"><%= @customer.last_name %><%= @customer.first_name %></td>
+      </tr>
+      <tr>
+        <th class="col-md-offset-2 col-md-3">フリガナ</th>
+        <td class="col-md-1"><%= @customer.last_name_kana %><%= @customer.first_name_kana%></td>
+      </tr>
+      <tr>
+        <th class="col-md-offset-2 col-md-3">郵便番号</th>
+        <td class="col-md-1"><%= @customer.postal_code %></td>
+      </tr>
+      <tr>
+        <th class="col-md-offset-2 col-md-3">住所</th>
+        <td class="col-md-1"><%= @customer.address %></td>
+      </tr>
+      <tr>
+        <th class="col-md-offset-2 col-md-3">電話番号</th>
+        <td class="col-md-1"><%= @customer.telephone_number %></td>
+      </tr>
+      <tr>
+        <th class="col-md-offset-2 col-md-3">メールアドレス</th>
+        <td class="col-md-1"><%= @customer.email %></td>
+      </tr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="senter">
+      <tr>
+        <th><%= link_to "編集する" edit_admins_customer_path(@customer) %></th>
+        <th><%= link_to "注文履歴一覧を見る" admins_order_path %></th>
+      </tr>
+    </div>
+  </div>
+</div>
