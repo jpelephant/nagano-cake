@@ -1,1 +1,35 @@
+<h1><strong>注文情報入力</strong></h1>
 
+<%= from_with model: @customers ture do |f| %>
+<h3><p>支払方法</p></h3>
+
+<div class="row">
+  <div class="col-md-3">
+    <%= f.radio_button :payment_method, credit_card checked: true %>
+    <%= f.radio_button :payment_method, transfer %>
+  </div>
+  <div class="col-md-10">
+    <h3><p>お届け先</p></h3>
+
+  </div>
+  <div class="col-md-9">
+    <h3><p>新しいお届け先</p></h3>
+    <table>
+      <tr>
+        <th>郵便番号（ハイフンなし）</th>
+        <td><%= f.text_field :postal_code %></td>
+      </tr>
+      <tr>
+        <th>住所</th>
+        <td><%= f.text_field :address %></td>
+      </tr>
+      <tr>
+        <th>宛名</th>
+        <td><%= f.text_field :name %></td>
+      </tr>
+    </table>
+    <senter>
+      <%= f.submit "確認画面に進む" %>
+    </senter>
+  </div>
+</div>
