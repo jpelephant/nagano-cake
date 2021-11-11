@@ -8,32 +8,32 @@
         <table>
             <tr>
                 <th>氏名</th>
-                <td><%= current_customer.last_name +" "+ current_customer.first_name %></td>
+                <td><%= current_@customer.last_name +" "+ current_@customer.first_name %></td>
             </tr>
             <tr>
                 <th>カナ</th>
-                <td><%= current_customer.last_name_kana +" "+ current_customer.first_name_kana %></td>
+                <td><%= current_@customer.last_name_kana +" "+ current_@customer.first_name_kana %></td>
             </tr>
             <tr>
                 <th>郵便番号</th>
-                <td><%= current_customer.postal_code %></td>
+                <td><%= current_@customer.postal_code %></td>
             </tr>
             <tr>
                 <th>住所</th>
-                <td><%= current_customer.address %></td>
+                <td><%= current_@customer.address %></td>
             </tr>
             <tr>
                 <th>電話番号</th>
-                <td><%= current_customer.phone_number %></td>
+                <td><%= current_@customer.phone_number %></td>
             </tr>
             <tr>
                 <th>メールアドレス</th>
-                <td><%= current_customer.email %></td>
+                <td><%= current_@customer.email %></td>
             </tr>
         </table>
         <p>
             <strong>配送先</strong>
-            <%= link_to "一覧を見る", customers_shipping_addresses_pat %> 
+            <%= link_to "一覧を見る", @customers_shipping_addresses_pat %> 
         </p>
         <p>
             <strong>注文履歴</strong>

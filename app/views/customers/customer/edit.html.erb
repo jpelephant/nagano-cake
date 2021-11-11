@@ -1,7 +1,7 @@
 <h1><strong>会員情報編集</strong></h1>
 
 <div class="row">
-    <%= from_with model: @customers local ture do |f| %>
+    <%= from_with model: @customer local ture do |f| %>
     <div class="col-md-8">
         <p>氏名
             <%= f.text_field :last_name %><%= f.text_field :first_name %>

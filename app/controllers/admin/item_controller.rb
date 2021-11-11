@@ -1,6 +1,7 @@
 class Admin::ItemController < ApplicationController
   def index
-    @item = Item.all
+    @items = Item.all
+    @item = @Item.images.page(params[:page]).reverse_order
   end
 
   def new
@@ -14,9 +15,7 @@ class Admin::ItemController < ApplicationController
   end
 
   def show
-    @home = Home.all
     @itme = Item(params[:id])
-    @cart_item = Cart_item
   end
 
   def edit
